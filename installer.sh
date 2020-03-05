@@ -22,7 +22,7 @@ After=syslog.target
 [Service]
 WorkingDirectory=${WORKDIR}
 SyslogIdentifier=Scoold
-ExecStart=/bin/bash -c "java -jar -Dserver.port=${PORT} -Dconfig.file=${WORKDIR}/application.conf scoold-*.jar"
+ExecStart=/bin/bash -c "java -jar -Dserver.port=${PORT} -Dconfig.file=/mnt/scoold/application.conf scoold-*.jar"
 User=ubuntu
 [Install]
 WantedBy=multi-user.target
