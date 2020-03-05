@@ -24,5 +24,4 @@ RUN git clone --depth=1 https://github.com/Erudika/scoold /scoold/clone && \
 EXPOSE 8000
 
 CMD sleep $BOOT_SLEEP && \
-	ln -s /mnt/scoold/application.conf /scoold/application.conf && \
 	java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar scoold-*.jar
